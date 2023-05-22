@@ -1,15 +1,15 @@
-import { Outlet } from 'react-router-dom'
-import { CustomLink } from './CustomLink'
+import { NavLink, Outlet } from 'react-router-dom'
+import '../index.css'
 
-// const setActive = ({isActive}:any)=>isActive ? 'active-link' : 'link'
+const setActive = ({isActive}:any)=>isActive ? 'active-link' : 'link'
 
 export function Layout() {
     return (
         <>
         <header>
-            <CustomLink to="/">Home</CustomLink>
-            <CustomLink to="/posts">Blog</CustomLink>
-            <CustomLink to="/about">About</CustomLink>
+            <NavLink to="/" className={setActive}>Home</NavLink>
+            <NavLink to="/posts" className={setActive}>Blog</NavLink>
+            <NavLink to="/about" className={setActive}>About</NavLink>
         </header>
         <main className='container'>
             <Outlet/>

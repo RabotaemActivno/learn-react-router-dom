@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ body {
   padding-right: 300px;
 }
 .active-link {
+  --link-active: red;
   font-size: 25px;
   color: rgb(167, 191, 157);
   margin-top: 20px;
